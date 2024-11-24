@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "cn">
+    <head>
+        <meta charset="utf-8">
+        <title>元具·主页</title>
+
+        <!--样式表-->
+        <link rel="stylesheet" type="text/css" href="../css/head.css"> <!--页首和页尾-->
+        <link rel="stylesheet" type="text/css" href="../css/debug.css"> <!--DEBUG-->
+        <link rel="stylesheet" type="text/css" href="../css/card.css"> <!--卡片组件-->
+        <link rel="stylesheet" type="text/css" href="../css/main.css"> <!--专属内容物-->
+        <link rel="stylesheet" type="text/css" href="../css/tips.css"> <!--提示框-->
+
+        <!--JS-->
+        <script src="../js/cookie.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <!--导航栏-->
+            <ul>
+                <li><a href="#" onclick="alert('请先完成选择！');">主页</a></li>
+                <li><a href="#" onclick="DEBUG_ON_OFF();"        >测试</a></li>
+            </ul>
+        </div>
+        <div id="background">
+            <!--表头-->
+            <h1 id = "head">欢迎！</h1>
+            <h2>确认您是人类</h2>
+
+            <!--验证卡片-->
+            <div id = "is_human_card" class = "card" style="background-color: lightcoral;">
+                <!--上方选项-->
+                <div id="is_human">
+                    <label for = "is_human_box" id="is_human_lable">无法开始</label>
+                    <input type = "checkbox" id = "is_human_box" disabled onchange="change_text_in_progress();" >
+                </div>
+                
+                <!--下方提示-->
+                <p id = "tip">
+                    等待JavaScript脚本
+                    <swap id = "tip_st">.</swap>
+                    <swap id = "tip_nd">&nbsp;</swap>
+                    <swap id = "tip_rd">&nbsp;</swap>
+                </p>
+            </div>
+
+            <!--声明-->
+            <br><br>
+            <div class="card">
+                本网站仅供娱乐、交流<br>本网站内部分内容不负责任<br><img alt="Static Badge" src="https://img.shields.io/badge/Bilibili-%E5%90%8D%E6%9B%B0zhuo%E5%B2%B3-blue?link=https%3A%2F%2Fspace.bilibili.com%2F1150235508">
+            </div>
+
+            <!--猫武士二创入口-->
+            <div id = "end">
+                <a href="#" class="tips" id="not_human" data-tooltip='你是怎么找到我的 Σ(⊙▽⊙"a' onclick="visit_cat_website();"><button>切换物种</button></a>
+            </div>
+
+            <!--防no JavaScript-->
+            <noscript>
+                由于您的浏览器不支持JavaScript，所以请使用以下链接直接进入：
+                https://
+            </noscript>
+
+            <!--DEBUG-->
+            <div id="debug" class="invisible">
+                <hr>
+                <h2>调试模式</h2>
+        
+                <!--错误显示区-->
+                <h3>错误</h3>
+                <div id="error_container"></div>
+                
+                <!--其他数据-->
+                <h3>数据</h3>
+                <!--DEBUG1-->
+                <p><strong>当前四个点状态: </strong></p>
+                <p id = "DEBUG1">无</p>
+
+                <!--DEBUG2-->
+                <p><strong>DEBUG2: </strong></p>
+                <p id = "DEBUG2">无</p>
+            </div>
+        </div>
+        
+        <!--JS（更新勿动）-->
+        <script src="../js/welcome_page.js"></script>
+    </body>
+</html>

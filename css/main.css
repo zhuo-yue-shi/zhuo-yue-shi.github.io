@@ -1,0 +1,42 @@
+#tip {
+    /*下边距修正*/
+    margin-bottom: 0em;
+
+    /*字体颜色（自定义）*/
+    color: gray;
+
+    /*字体居中*/
+    text-align: center;
+}
+
+#is_human{
+    /*字体居中*/
+    text-align: center;
+}
+
+#background{
+    /*保持样式*/
+    box-sizing: border-box;
+
+    /* 容器宽度占满整个视口 */
+    width: 100%; 
+
+    /* 使内部元素水平居中 */
+    text-align: center; 
+}
+
+.card{
+    /* 使元素可以水平居中 */
+    display: inline-block; 
+    width: 100%;
+}
+
+button{
+    /*圆角及边框*/
+    border-radius: 10px;
+    border: none;
+
+    /*大小*/
+    width: 100px;
+    height: 30px;
+}

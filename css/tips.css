@@ -1,0 +1,55 @@
+.tips{
+    position: relative;
+}
+
+.tips::after{
+    /*内容*/
+    content: attr(data-tooltip);
+
+    /*初始隐藏*/
+    visibility: hidden;
+
+    /*提示框颜色（自定义）*/
+    background-color: gray;
+    color: #fff;
+
+    /*字体居中*/
+    text-align: center;
+
+    /*提示框圆角（自定义）*/
+    border-radius: 10px;
+
+    /*边框*/
+    padding: 5px;
+
+    /*边框类型*/
+    position: absolute;
+
+    /*前后堆叠*/
+    z-index: 1;
+
+    /*使提示文本出现在链接上方*/
+    bottom: 150%; 
+
+    /*保持居中*/
+    left: 50%;
+
+    /*精确调整工具提示的水平位置*/
+    transform: translateX(-50%);
+
+    /*文字防，换行*/
+    white-space: nowrap;
+
+    /*初始情况*/
+    opacity: 0;
+
+    /*动画*/
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tips:hover::after {
+    visibility: visible;
+
+    /*出现*/
+    opacity: 1;
+}

@@ -1,0 +1,15 @@
+/* 卡片 */
+.card {
+    /*背景颜色（自定义）*/
+    background-color: #f8f9fa;
+    
+    /*边框（自定义）*/
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+
+    /*内边距*/
+    padding: 1rem;
+    
+    /* 设置最大宽度 */
+    max-width: 300px;
+}

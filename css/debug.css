@@ -1,0 +1,22 @@
+#debug{
+    /*默认隐藏*/
+    opacity: 0;
+
+    /*渐变*/
+    transition: opacity 0.5s ease-in-out;
+}
+
+#debug.visible {
+    /*显示*/
+    opacity: 1;
+}
+
+#debug.invisible {
+    /*隐藏*/
+    opacity: 0;
+}
+
+/* 错误提示 */
+.error {
+    color: red;
+}
