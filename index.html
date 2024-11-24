@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>元具·主页</title>
 
+        <!--图标-->
+        <link rel="icon" href="../resource/icon 32.png" type="image/png">
+
         <!--样式表-->
         <link rel="stylesheet" type="text/css" href="css/head.css"> <!--页首和页尾-->
         <link rel="stylesheet" type="text/css" href="css/debug.css"> <!--DEBUG-->
@@ -15,9 +18,35 @@
         <div class="sidebar">
             <!--导航栏-->
             <ul>
-                <li><a href="welcome_page/">导航</a></li>
-                <li><a href="#">主页</a></li>
-                <li><a href="#" onclick="DEBUG_ON_OFF();">测试</a></li>
+                <!--图标-->
+                <li><img alt="图标" src="../resource/icon 32.png" class="logo"></li>
+                <!--导航-->
+                <li>
+                    <div class="icon">
+                        <a href="welcome_page/">
+                            <img alt="" class="icon" src="resource/IconLayoutSidebarFilled.png" >
+                            <swap>导航</swap>
+                        </a>
+                    </div>
+                </li>
+                <!--主页-->
+                <li>
+                    <div class="icon">
+                        <a href="#">
+                            <img alt="" class="icon" src="resource/IconHome.png" >
+                            <swap>主页</swap>
+                        </a>
+                    </div>
+                </li>
+                <!--测试-->
+                <li>
+                    <div class="icon">
+                        <a href="#">
+                            <img alt="" class="icon" src="resource/IconCodeCircle2Filled.png">
+                            <swap>测试</swap>
+                        </a>
+                    </div>
+                </li>
             </ul>
         </div>
         <div id="background">
