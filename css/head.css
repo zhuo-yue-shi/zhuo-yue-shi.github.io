@@ -51,7 +51,7 @@
 
 #background {
     /* 导航栏宽度 */
-    margin-left: 41px; 
+    margin-left: 71px; 
 
     /* 内边距（margin预览） */
     padding: 20px;
@@ -86,10 +86,37 @@
 /*图标*/
 .icon{
     /*大小*/
-    width: 40px;
+    width: 35px;
     height: auto;
 }
 
 .icon_div{
+    /*文字居中*/
     text-align: center; 
+
+    /*字体设置*/
+    font-size: 12px;
+
+    /* 使伪元素生效 */
+    position: relative;
+}
+
+/* 蓝色横线指示器 */
+.indicator {
+    /*定位类型*/
+    position: absolute;
+
+    visibility: hidden;
+    top: 0px;
+
+    /* 动画效果 */
+
+    /*圆角*/
+    border-radius: 5px;
+
+    /*可自定义*/
+    left: 10px; /* 调整横线距离图标的距离 */
+    width: 5px; /* 横线的宽度 */
+    height: 30px; /* 横线的高度 */
+    background-color: #07fba5; /* 横线的颜色 */  
 }

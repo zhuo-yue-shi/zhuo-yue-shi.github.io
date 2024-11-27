@@ -13,6 +13,7 @@
 
         <!--JS-->
         <script src="js/cookie.js"></script>
+        
     </head>
     <body>
         <div class="sidebar">
@@ -21,16 +22,16 @@
                 <!--图标-->
                 <li><img alt="图标" src="../resource/icon 32.png" class="logo"></li>
                 <!--导航-->
-                <li>
+                <li id="navigationItem">
                     <div class="icon_div">
-                        <a href="welcome_page/">
+                        <a href="navigationPage/">
                             <img alt="" class="icon" src="resource/IconLayoutSidebarFilled.png" >
                             <swap>导航</swap>
                         </a>
                     </div>
                 </li>
                 <!--主页-->
-                <li>
+                <li id="homeItem">
                     <div class="icon_div">
                         <a href="#">
                             <img alt="" class="icon" src="resource/IconHome.png" >
@@ -48,6 +49,8 @@
                     </div>
                 </li>
             </ul>
+            <!-- 蓝色横线指示器 -->
+            <div class="indicator" id="indicator"></div>
         </div>
         <div id="background">
             <!--表头-->
@@ -56,5 +59,6 @@
     
         <!--JS（更新勿删）-->    
         <script src="js/homepage.js"></script>
+        <script src="js/pageIndicator.js"></script>
     </body>
 </html>

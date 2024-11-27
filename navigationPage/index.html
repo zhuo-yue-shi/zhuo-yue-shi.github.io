@@ -16,15 +16,25 @@
 
         <!--JS-->
         <script src="../js/cookie.js"></script>
+        <script src="../js/pageIndicator.js"></script>
     </head>
     <body>
         <div class="sidebar">
             <!--导航栏-->
             <ul>
                 <li><img alt="图标" src="../resource/icon 32.png" class="logo"></li>
-                <li>
+                <!--导航-->
+                <li id="navigationItem">
                     <div class="icon_div">
-                        <a href="#" onclick="alert('请先完成选择！');">
+                        <a href="#">
+                            <img alt="" class="icon" src="../resource/IconLayoutSidebarFilled.png" >
+                            <swap>导航</swap>
+                        </a>
+                    </div>
+                </li>
+                <li id="homeItem">
+                    <div class="icon_div">
+                        <a href="#" onclick="want_to_visit_homepage();">
                             <img alt="" class="icon" src="../resource/IconHome.png" >
                             <swap>主页</swap>
                         </a>
@@ -39,6 +49,8 @@
                     </div>
                 </li>
             </ul>
+            <!-- 蓝色横线指示器 -->
+            <div class="indicator" id="indicator"></div>
         </div>
         <div id="background">
             <!--表头-->
@@ -84,27 +96,6 @@
                 由于您的浏览器不支持JavaScript，所以请使用以下链接直接进入：
                 https://
             </noscript>
-
-            <!--DEBUG-->
-            <div id="debug" class="invisible">
-                <hr>
-                <h2>调试模式</h2>
-        
-                <!--错误显示区-->
-                <h3>错误</h3>
-                <div id="error_container"></div>
-                
-                <!--其他数据-->
-                <h3>数据</h3>
-                <!--DEBUG1-->
-                <p><strong>当前四个点状态: </strong></p>
-                <p id = "DEBUG1">无</p>
-
-                <!--DEBUG2-->
-                <p><strong>DEBUG2: </strong></p>
-                <p id = "DEBUG2">无</p>
-            </div>
-        </div>
         
         <!--JS（更新勿动）-->
         <script src="../js/welcome_page.js"></script>

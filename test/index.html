@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自定义链接提示示例</title>
+    <title>垂直导航栏示例</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div style="margin: 10px;">
-        <a href="https://example.com" class="custom-tooltip" data-tooltip="这是一个示例链接">点击这里</a>
+    <div class="sidebar">
+        <!-- 导航栏 -->
+        <ul>
+            <!-- 图标 -->
+            <li><img alt="图标" src="../resource/icon 32.png" class="logo"></li>
+            <!-- 导航 -->
+            <li id="navigationItem">
+                <div class="icon_div">
+                    <a href="../navigationPage/">
+                        <img alt="" class="icon" src="../resource/IconLayoutSidebarFilled.png">
+                        <swap>导航</swap>
+                    </a>
+                </div>
+            </li>
+            <!-- 主页 -->
+            <li id="homeItem">
+                <div class="icon_div">
+                    <a href="#">
+                        <img alt="" class="icon" src="../resource/IconHome.png">
+                        <swap>主页</swap>
+                    </a>
+                </div>
+            </li>
+            <!-- 测试 -->
+            <li>
+                <div class="icon_div">
+                    <a href="#">
+                        <img alt="" class="icon" src="../resource/IconCodeCircle2Filled.png">
+                        <swap>测试</swap>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <!-- 蓝色横线指示器 -->
+        <div class="indicator" id="indicator"></div>
     </div>
-    <div style="margin: 50px;">
-        <a href="https://example.com" class="custom-tooltip" data-tooltip="这是另一个示例链接">点击这里</a>
-    </div>
-    <div style="margin: 50px;">
-        <a href="https://example.com" class="custom-tooltip" data-tooltip="这是第三个示例链接">点击这里</a>
-    </div>
-    <div style="margin: 100px;">
-        <a href="https://example.com" class="custom-tooltip" data-tooltip="你好">点击这里</a>
-    </div>
-    <script src="scripts.js"></script>
 </body>
 </html>

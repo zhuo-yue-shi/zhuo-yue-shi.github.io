@@ -1,55 +1,92 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* 图标 */
+.icon {
+    /* 大小 */
+    width: 35px;
+    height: auto;
 }
 
-.custom-tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: blue;
-}
-
-.tooltip {
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
+.icon_div {
+    /* 文字居中 */
     text-align: center;
-    border-radius: 5px;
-    padding: 5px;
+
+    /* 字体设置 */
+    font-size: 12px;
+
+    /* 使伪元素生效 */
+    position: relative;
+}
+
+/* 导航栏 */
+.sidebar {
+    /* 将导航栏至于左侧 */
+    position: fixed;
+
+    /* 锁定导航栏位置 */
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    /* 导航栏宽度（自定义） */
+    width: 79px;
+
+    /* 导航栏颜色（自定义） */
+    background-color: #333;
+    color: white;
+
+    /* 内边框 */
+    padding: 20px;
+
+    /* 固定大小 */
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    /* 去除编号 */
+    list-style-type: none;
+
+    /* 无内边框 */
+    padding: 0;
+
+    /* 无外边框 */
+    margin-top: 0;
+}
+
+.sidebar ul li {
+    /* 上下间距（自定义） */
+    margin: 10px 0;
+
+    /* 无外边框 */
+    margin-top: 0;
+}
+
+.sidebar ul li a {
+    /* 颜色 */
+    color: white;
+
+    /* 下划线 */
+    text-decoration: none;
+
+    /* 使内容与伪元素垂直居中 */
+    display: flex;
+    align-items: center;
+}
+
+/* 蓝色横线指示器 */
+.indicator {
+    /*定位类型*/
     position: absolute;
-    z-index: 1;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none; /* 防止工具提示遮挡鼠标事件 */
-    min-height: 20px; /* 设置最小高度 */
-    max-width: 200px; /* 设置最大宽度，防止过长 */
-    word-wrap: break-word; /* 允许长单词或 URL 断行 */
-}
 
-.tooltip.top {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    display: none;
 
-.tooltip.bottom {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    /* 动画效果 */
+    transition: top 0.3s ease; 
 
-.tooltip.left {
-    right: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-}
+    /*圆角*/
+    border-radius: 5px;
 
-.tooltip.right {
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+    /*可自定义*/
+    left: 10px; /* 调整横线距离图标的距离 */
+    width: 5px; /* 横线的宽度 */
+    height: 30px; /* 横线的高度 */
+    background-color: #07fba5; /* 横线的颜色 */  
 }

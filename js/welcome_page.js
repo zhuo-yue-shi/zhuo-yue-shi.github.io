@@ -4,8 +4,6 @@ var now_look = 0;
 
 // 调试
 var DEBUG  = false;
-var DEBUG1 = window.document.getElementById("DEBUG1");
-var DEBUG2 = window.document.getElementById("DEBUG2");
 
 // 获取html标签
 var tip_st = window.document.getElementById("tip_st");         // 第一个点
@@ -99,8 +97,6 @@ function next_tick(){
     // 更新变量
     now_look = (now_look + 1) % 3;
 
-    DEBUG1.firstChild.nodeValue = now_look;
-
     // 更新界面
     if (now_look == 0)
         tip_st.innerHTML = ".";
@@ -136,6 +132,15 @@ function visit_cat_website(){
 
     // 跳转
     window.location.replace("../cat_warriors/")
+}
+
+// 测试进入
+function want_to_visit_homepage(){
+    if(!getCookie("visit_website") || getCookie("visit_website" != "ok")){
+        alert('请先完成选择！');
+    } else {
+        window.location.href = "../";
+    }
 }
 
 // 初始化界面
