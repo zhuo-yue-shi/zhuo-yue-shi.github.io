@@ -131,7 +131,7 @@ function visit_cat_website(){
     setCookie('visit_website', 'ok');
 
     // 跳转
-    window.location.replace("../Furrywarriors/")
+    window.location.replace("../VisitFurryWarriors")
 }
 
 // 测试进入

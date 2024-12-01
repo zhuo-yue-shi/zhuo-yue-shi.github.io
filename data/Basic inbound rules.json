@@ -1,3 +1,5 @@
 {
-    "inbound_redirection": false
+    "inbound_redirection": false,
+    "openTheFurryWorriosSubsite": false,
+    "FurryWorriosSubsiteAccessPassword": "wxq"
 }

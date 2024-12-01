@@ -1,0 +1,40 @@
+#tip{
+    /*边框设置*/
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    /*自定义项*/
+    color: grey;
+    font-size: 80%;
+}
+
+button{
+    /*字体颜色*/
+    color: white;
+
+    /*边框设置*/
+    border: 0;
+    border-radius: 5px;
+
+    /*背景颜色*/
+    background-color: #07fba5;
+}
+
+button:disabled{
+    /*背景颜色*/
+    background-color: #07fba67c;
+}
+
+input{
+    /*边框设置*/
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+input:focus{
+    /*边框设置*/
+    border: 1px solid #07fba67c;
+
+    /* 去掉默认的蓝色轮廓 */
+    outline: none; 
+}

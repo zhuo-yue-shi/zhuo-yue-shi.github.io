@@ -2,12 +2,14 @@
 <html lang = "cn">
     <head>
         <meta charset="utf-8">
-        <title>主页 | Furry worrios</title>
+        <title>入站须知 | Furry worrios</title>
 
         <!--图标预留位-->
 
         <!--样式表-->
         <link rel="stylesheet" type="text/css" href="../css/head.css"> <!--页首和页尾-->
+        <link rel="stylesheet" type="text/css" href="../css/card.css"> <!--卡片组件-->
+        <link rel="stylesheet" type="text/css" href="../css/Furry worrios/check.css"> <!--专属内容物-->
 
         <!--JS-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,7 +18,7 @@
 
         <!--导航栏指示器--> <script src="../js/Furrywarriors/PageIndicator/PageIndicatorMove.js"></script>
 
-        <!--防越狱--> <script src="../js/Furrywarriors/checkCookiePassword.js"></script>
+        <!--入站检测--> <script src="../js/Furrywarriors/check.js"></script>
     </head>
     <body>
         <div class="sidebar">
@@ -34,38 +36,11 @@
                     </div>
                 </li>
                 <!--主页--> 
-                <li id="homeItem">
+                <li id="checkItem">
                     <div class="icon_div">
                         <a href="#">
-                            <img alt="" class="icon" src="../resource/IconHome.png" >
-                            <swap>主页</swap>
-                        </a>
-                    </div>
-                </li>
-                <!--书籍--> 
-                <li id="booksItem">
-                    <div class="icon_div">
-                        <a href="books/">
-                            <img alt="" class="icon" src="../resource/material-symbols_book-2-outline-rounded.png" >
-                            <swap>书籍</swap>
-                        </a>
-                    </div>
-                </li>
-                <!--人物--> 
-                <li id="catsItem">
-                    <div class="icon_div">
-                        <a href="cats/">
-                            <img alt="" class="icon" src="../resource/solar_cat-linear.png" >
-                            <swap>人物</swap>
-                        </a>
-                    </div>
-                </li>
-                <!--族群--> 
-                <li id="groupsItem">
-                    <div class="icon_div">
-                        <a href="groups/">
-                            <img alt="" class="icon" src="../resource/material-symbols_other-houses-outline-rounded.png" >
-                            <swap>族群</swap>
+                            <img alt="" class="icon" src="../resource/material-symbols_health-and-safety-outline-rounded.png" >
+                            <swap>检查</swap>
                         </a>
                     </div>
                 </li>
@@ -74,12 +49,18 @@
             <script src="../js/Furrywarriors/PageIndicator/PageIndicatorLoad.js"></script>
         </div>
         <div id="background">
-            <!--表头-->
-            
-
+            <h1>欢迎来到Furry warriors</h1>
+            <h3>入站须知</h3>
+            <p>本站内所有内容均经过原作者同意，本站只提供技术支持。</p>
+            <p>本站处于内测阶段，暂不对外开放。</p>
+            <div class="card">
+                <label for="password">入站密码</label>
+                <input name="password" id="password" type="password" disabled oninput="updataSubmitButton();">
+                <button id="submit" disabled onclick="checkInputPassword();">确定</button>
+                <p id="tip">正在检查入站申请...</p>
+            </div>
         </div>
     
         <!--JS（更新勿删）-->    
-        <script src="../js/Furrywarriors/homepage.js"></script>
     </body>
 </html>

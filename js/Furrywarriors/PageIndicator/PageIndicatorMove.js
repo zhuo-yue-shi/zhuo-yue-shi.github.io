@@ -13,6 +13,9 @@
     需要维护！
 */
 
+// 常量
+const defaultPosition = 0;
+
 window.document.addEventListener('DOMContentLoaded', function() {
     // 加载成功
     console.log("✅ 加载成功: [导航栏指示器移动脚本]")
@@ -27,48 +30,43 @@ window.document.addEventListener('DOMContentLoaded', function() {
     const booksItem = document.getElementById('booksItem');
     const catsItem = document.getElementById('catsItem');
     const groupsItem = document.getElementById('groupsItem');
+    const checkItem = document.getElementById('checkItem');
 
     // 变量获取确认
     if (!indicator){
-        console.error("❌ 获取失败: [导航栏指示器元素]\n　 请检查HTML代码中是否正确包含了ID为[indicator]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏指示器元素]缺失");
+        console.error("❌ 获取失败: [导航栏指示器元素]\n　 HTML代码中未包含ID为[indicator]的<div>");
+        console.info("⚠️ 脚本逼停: [导航栏提示器移动脚本]停止运行");
         return;
     }
     if (!homeItem) {
-        console.error("❌ 获取失败: [导航栏主页选项元素]\n　 请检查HTML代码中是否正确包含了ID为[homeItem]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏主页选项元素]缺失");
-        return;
+        console.log("❌ 获取失败: [导航栏主页选项元素]\n　 HTML代码中未包含ID为[homeItem]的<div>");
     }
     if (!navigationItem) {
-        console.error("❌ 获取失败: [导航栏导航选项元素]\n　 请检查HTML代码中是否正确包含了ID为[navigationItem]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏导航选项元素]缺失");
-        return;
+        console.log("❌ 获取失败: [导航栏导航选项元素]\n　 HTML代码中未包含ID为[navigationItem]的<div>");
     }
     if (!booksItem) {
-        console.error("❌ 获取失败: [导航栏书籍选项元素]\n　 请检查HTML代码中是否正确包含了ID为[booksItem]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏书籍选项元素]缺失");
-        return;
+        console.log("❌ 获取失败: [导航栏书籍选项元素]\n　 HTML代码中未包含ID为[booksItem]的<div>");
     }
     if (!catsItem) {
-        console.error("❌ 获取失败: [导航栏人物选项元素]\n　 请检查HTML代码中是否正确包含了ID为[catsItem]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏人物选项元素]缺失");
-        return;
+        console.log("❌ 获取失败: [导航栏人物选项元素]\n　 HTML代码中未包含ID为[catsItem]的<div>");
     }
     if (!groupsItem) {
-        console.error("❌ 获取失败: [导航栏族群选项元素]\n　 请检查HTML代码中是否正确包含了ID为[groupsItem]的<div>");
-        console.info("⚠️ 脚本逼停: [导航栏指示器移动脚本]\n　 由于[导航栏族群选项元素]缺失");
-        return;
+        console.log("❌ 获取失败: [导航栏族群选项元素]\n　 HTML代码中未包含ID为[groupsItem]的<div>");
+    }
+    if (!checkItem) {
+        console.log("❌ 获取失败: [导航栏检查选项元素]\n　 HTML代码中未包含ID为[groupsItem]的<div>");
     }
 
     console.log(`ℹ️ 获取路径: ${currentPath}`);
     
     // 获取每个菜单项的顶部位置
     // !需要根据页面的添加增减!
-    const homeRect = homeItem.getBoundingClientRect();
-    const navigationRect = navigationItem.getBoundingClientRect();
-    const booksRect = booksItem.getBoundingClientRect();
-    const catsRect = catsItem.getBoundingClientRect();
-    const groupsRect = groupsItem.getBoundingClientRect();
+    const homeRect = (homeItem) ? homeItem.getBoundingClientRect() : defaultPosition;
+    const navigationRect = (navigationItem) ? navigationItem.getBoundingClientRect() : defaultPosition;
+    const booksRect = (booksItem) ? booksItem.getBoundingClientRect() : defaultPosition;
+    const catsRect = (catsItem) ? catsItem.getBoundingClientRect() : defaultPosition;
+    const groupsRect = (groupsItem) ? groupsItem.getBoundingClientRect() : defaultPosition;
+    const checkRect = (checkItem) ? checkItem.getBoundingClientRect() : defaultPosition;
 
     // JS脚本正常运行，显示指示器
     console.log("ℹ️ 元素显示: [导航栏指示器元素]\n　 由于JS代码加载正常，启动导航栏指示器。")
@@ -86,6 +84,8 @@ window.document.addEventListener('DOMContentLoaded', function() {
         indicator.style.top = `${catsRect.top + 15}px`; // 15px 是上边距
     } else if (currentPath === '/Furrywarriors/groups/') {
         indicator.style.top = `${groupsRect.top + 15}px`; // 15px 是上边距
+    } else if (currentPath === '/VisitFurryWarriors/') {
+        indicator.style.top = `${checkRect.top + 15}px`; // 15px 是上边距
     } else {
         indicator.style.visibility = "hide";
     }
