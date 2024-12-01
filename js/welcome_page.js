@@ -126,21 +126,48 @@ function DEBUG_ON_OFF(){
     }
 }
 
-// 切换到猫武士二创
+// 切换到Furry warriors
 function visit_cat_website(){
     setCookie('visit_website', 'ok');
 
     // 跳转
-    window.location.replace("../cat_warriors/")
+    window.location.replace("../Furrywarriors/")
 }
 
 // 测试进入
 function want_to_visit_homepage(){
-    if(!getCookie("visit_website") || getCookie("visit_website" != "ok")){
-        alert('请先完成选择！');
-    } else {
-        window.location.href = "../";
-    }
+    // 使用 fetch API 读取 JSON 文件
+    fetch('../data/Basic inbound rules.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // 访问 inbound_redirection 属性
+            const inboundRedirection = data.inbound_redirection;
+
+            // 选择性跳转
+            if (inboundRedirection){
+                if(!getCookie("visit_website") || getCookie("visit_website" != "ok")){
+                    alert('请先完成选择！');
+                } else {
+                    window.location.href = "../";
+                }
+            } else {
+                window.location.href = "../";
+            }
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+}
+
+function check_check_cookie(){
+    
+    
+            
 }
 
 // 初始化界面

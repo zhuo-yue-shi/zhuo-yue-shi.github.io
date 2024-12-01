@@ -110,6 +110,7 @@
     top: 0px;
 
     /* 动画效果 */
+    transition: top 0.3s ease;
 
     /*圆角*/
     border-radius: 5px;
@@ -120,5 +121,3 @@
     height: 30px; /* 横线的高度 */
     background-color: #07fba5; /* 横线的颜色 */  
 }
-
-/*测试*/

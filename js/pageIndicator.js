@@ -15,14 +15,13 @@ window.document.addEventListener('DOMContentLoaded', function() {
     console.log(indicator.style.top);
     indicator.style.visibility = "visible";
 
+    console.log(`路径：${currentPath}`)
+    
     // 获取每个菜单项的顶部位置
     const homeRect = homeItem.getBoundingClientRect();
     const navigationRect = navigationItem.getBoundingClientRect();
 
-    console.log(`路径：${currentPath}`)
-
     // 设置初始位置
-    indicator.style.transition = 'top 0.3s ease';
     if (currentPath === '/') {
         indicator.style.top = `${homeRect.top + 15}px`; // 15px 是上边距
     } else if (currentPath === '/navigationPage/') {
