@@ -3,45 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>垂直导航栏示例</title>
+    <title>轮播广告栏</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <!-- 导航栏 -->
-        <ul>
-            <!-- 图标 -->
-            <li><img alt="图标" src="../resource/icon 32.png" class="logo"></li>
-            <!-- 导航 -->
-            <li id="navigationItem">
-                <div class="icon_div">
-                    <a href="../navigationPage/">
-                        <img alt="" class="icon" src="../resource/IconLayoutSidebarFilled.png">
-                        <swap>导航</swap>
-                    </a>
-                </div>
-            </li>
-            <!-- 主页 -->
-            <li id="homeItem">
-                <div class="icon_div">
-                    <a href="#">
-                        <img alt="" class="icon" src="../resource/IconHome.png">
-                        <swap>主页</swap>
-                    </a>
-                </div>
-            </li>
-            <!-- 测试 -->
-            <li>
-                <div class="icon_div">
-                    <a href="#">
-                        <img alt="" class="icon" src="../resource/IconCodeCircle2Filled.png">
-                        <swap>测试</swap>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <!-- 蓝色横线指示器 -->
-        <div class="indicator" id="indicator"></div>
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+                <img src="IconCodeCircle2Filled.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="IconHome.png" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="IconLayoutSidebarFilled.png" alt="Image 3">
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

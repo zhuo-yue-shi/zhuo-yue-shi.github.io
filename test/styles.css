@@ -1,92 +1,29 @@
-/* 图标 */
-.icon {
-    /* 大小 */
-    width: 35px;
-    height: auto;
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
-.icon_div {
-    /* 文字居中 */
-    text-align: center;
-
-    /* 字体设置 */
-    font-size: 12px;
-
-    /* 使伪元素生效 */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
-/* 导航栏 */
-.sidebar {
-    /* 将导航栏至于左侧 */
-    position: fixed;
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */
+}
 
-    /* 锁定导航栏位置 */
-    top: 0;
-    left: 0;
-    height: 100%;
-
-    /* 导航栏宽度（自定义） */
-    width: 79px;
-
-    /* 导航栏颜色（自定义） */
-    background-color: #333;
-    color: white;
-
-    /* 内边框 */
-    padding: 20px;
-
-    /* 固定大小 */
+.carousel-slide {
+    min-width: 100%; /* 每个幻灯片占满整个容器宽度 */
     box-sizing: border-box;
 }
 
-.sidebar ul {
-    /* 去除编号 */
-    list-style-type: none;
-
-    /* 无内边框 */
-    padding: 0;
-
-    /* 无外边框 */
-    margin-top: 0;
-}
-
-.sidebar ul li {
-    /* 上下间距（自定义） */
-    margin: 10px 0;
-
-    /* 无外边框 */
-    margin-top: 0;
-}
-
-.sidebar ul li a {
-    /* 颜色 */
-    color: white;
-
-    /* 下划线 */
-    text-decoration: none;
-
-    /* 使内容与伪元素垂直居中 */
-    display: flex;
-    align-items: center;
-}
-
-/* 蓝色横线指示器 */
-.indicator {
-    /*定位类型*/
-    position: absolute;
-
-    display: none;
-
-    /* 动画效果 */
-    transition: top 0.3s ease; 
-
-    /*圆角*/
-    border-radius: 5px;
-
-    /*可自定义*/
-    left: 10px; /* 调整横线距离图标的距离 */
-    width: 5px; /* 横线的宽度 */
-    height: 30px; /* 横线的高度 */
-    background-color: #07fba5; /* 横线的颜色 */  
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
